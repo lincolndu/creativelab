@@ -1,0 +1,218 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+}
+
+body, html{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.wrapper{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: url('//creative.octagen.info/scratch/creme/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size:300px 250px;  
+    width: 300px;
+    height:250px;
+}
+
+#adArea {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    overflow: hidden;
+    text-overflow: clip;
+    cursor:pointer;
+    -ms-touch-action: "pan-down";
+    touch-action: "pan-down"; 
+    width: 300px;
+    height:250px;   
+}
+.sanitizer{
+    position: absolute;
+    bottom:8px;
+    left:24px; 
+    overflow: hidden;
+    background: url('//creative.octagen.info/scratch/creme/images/sanitizer.png');
+    background-size:45px 118px;  
+    width:45px;
+    height:118px; 
+}
+
+.wipemessage{
+    position: absolute;
+    top:11px;
+    left:13px; 
+    overflow: hidden;
+    background: url('//creative.octagen.info/scratch/creme/images/drag.png');
+    background-size:192px 73px;  
+    width:192px;
+    height:73px; 
+}
+
+.lead_box{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    z-index: 10000000;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    display: none;
+}
+
+
+small{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: black;
+    font-size: 10px;
+}
+
+.lead_box .flyingBG{
+   position: absolute;
+    left:9px;
+    top:11px;
+}
+
+.lead_box .flyingButton{
+    position: absolute;
+    left:80px;
+    bottom:8px;
+}
+
+
+@keyframes btnHeart {
+    0%,100%{
+        transform: scale(.9);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+
+
+#ctx {
+    -ms-touch-action: "pan-down";
+    touch-action: "pan-down";
+    top:50px;
+    left:113px;
+}
+
+#endAnimCont {
+    -ms-transform: scale(0.85, 0.85);
+    -webkit-transform: scale(0.85, 0.85);
+    transform: scale(0.85, 0.85);
+}
+.scalex05 {
+    position:absolute;
+    width:338px;
+    height:412px;
+    transform-origin: 0% 0%;
+    -ms-transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    top:50px;
+    left:113px;
+}
+
+.rct {
+    width:300px;
+    height:250px;
+    position: absolute;
+}
+
+.opacity0 {
+    opacity: 0;
+}
+
+.noEvents {
+    pointer-events : none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+            user-drag: none
+}
+
+@keyframes pulse {
+    0%,100% {
+        transform: translateX(0px) translateY(0px) scaleY(1);
+    }
+    50% {
+        transform: translateX(0px) translateY(40px) scaleY(1.15);
+    }
+}
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flyingMove {
+    0%,100% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+.flyingMove {
+    animation-name: flyingMove;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: .8s;
+    animation-fill-mode: both
+}
+.fadeSanitizerUp {
+    animation-name: fadeSanitizerUp;
+    animation-duration: .8s;
+    animation-fill-mode: both
+}
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: .8s;
+    animation-fill-mode: both
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0px, 200px, 100px) scaleY(1.5);
+    }
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0px, -150px, 100px) scaleY(.5);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0px, 0px, 100px) scaleY(1);
+    }
+}
+
+@keyframes fadeSanitizerUp {
+    to {
+        transform: translate3d(77px, -190px, 21px) scaleY(1.15);
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <link rel='stylesheet' type='text/css' href='//creative.octagen.info/scratch/creme/test.css'>
+    <script type='text/javascript' src='//creative.octagen.info/scratch/creme/Tween.js'></script>
+</head>
+
+<body>
+    <div class='wrapper'>
+        <div id='adArea' class='rct'>
+            <div id='endAnimCont' class='rct'>
+                <div id='bg1' class='scalex05'></div>
+            </div>
+            <div id='over' class='rct'></div>
+            <canvas id='ctx' width='338px' height='412px' class='scalex05'></canvas>
+            <div class='sanitizer'></div>
+            <div class='wipemessage'></div>
+            <div class='lead_box'>
+                <div class='flyingBG '><img src='//creative.octagen.info/scratch/creme/images/result.png' alt=''></div>
+                <div class='flyingButton '>
+                    <a href='#' target='_blank'><img src='//creative.octagen.info/scratch/creme/images/buy.png' alt=''></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='//creative.octagen.info/scratch/creme/test.js'></script>
+    <script>
+        var rSrc;
+        var revealImg = new Image();
+        var assets = {
+            init: {
+                url: '//creative.octagen.info/scratch/creme/images/',
+            }
+        };
+        var curCount = 0;
+        var countNeed = 2;
+
+        function countLoad() {
+            curCount++;
+            if (curCount == countNeed) {
+                init();
+            }
+        }
+        revealImg.onload = function() {
+            countLoad();
+        };
+        revealImg.src = assets.init.url + 'germhand.png';
+        rSrc = assets.init.url + 'cleanhand.png';
+    </script>
+</body>
+
+</html>
